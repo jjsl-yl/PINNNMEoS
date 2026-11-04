@@ -1,0 +1,6 @@
+{
+  "training": {"steps": 200000, "batch": 8192, "width": 256, "hidden_layers": 6, "activation": "SiLU", "lr_start": 0.0002, "lr_end": 0.00001, "optimizer": "AdamW", "weight_decay": 0.000001, "gradient_clip_norm": 10.0, "loss": "sum of four batch-mean squared normalized residuals", "normalization": "absolute original Table I reference", "floor_MeV3": 1000000, "nB_range_fm3": [0.0001,1.2], "Yp_range": [0.00001,0.5], "log_uniform_fraction": 0.35},
+  "ensemble": {"count": 432000, "relative_sigma": 0.4, "sigma_reference": "original Table I absolute values", "center": "optimized", "core_nB_range_fm3": [0.08,1.4], "core_points": 400, "beta_residual_tolerance_MeV": 0.0001},
+  "stellar": {"crust_join_fm3": 0.08, "initial_central_pressure_nodes": 100, "rtol": 0.0000002, "atol": 0.000000000001, "max_step_km": 0.03},
+  "note": "Settings summary; executable constants are in scripts/manuscript_settings.py and entry-point defaults. Historical published counts/timings have not been regenerated with this changed training and proposal configuration."
+}
